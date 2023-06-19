@@ -1,4 +1,4 @@
-# AI-based-Chatbot-for-Skin-Disease-Prediction
+**AI Based chatbot for Skin Disease Prediction Using Customised CNN, Decision Tree and NLP**
 Efficient and accurate system for diagnosing skin diseases that leverages the power of CNN, Dynamic ID3 decision tree, and NLP.
 
 Skin disease prediction chatbot project aims to create a chatbot that can help
