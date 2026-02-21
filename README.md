@@ -1,22 +1,69 @@
-**AI Based chatbot for Skin Disease Prediction Using Customised CNN, Decision Tree and NLP**
-Efficient and accurate system for diagnosing skin diseases that leverages the power of CNN, Dynamic ID3 decision tree, and NLP.
+# AI-Based Skin Disease Prediction Chatbot
 
-Skin disease prediction chatbot project aims to create a chatbot that can help
-people predict the type of skin disease they may have based on their symptoms.
-The chatbot will utilize a Customized Convolutional Neural Networks (CNN)
-model to categorize images of the user's skin and build a Decision Tree model to
-predict the most probable diagnosis based on the user's responses to a
-questionnaire. The CNN model will be trained on a dataset of skin images to
-classify them into different categories, such as squamous cell carcinoma, basal
-cell carcinoma, melanoma, nevus, actinic keratosis, seborrheic keratosis. The
-model will learn to identify patterns and features that are specific to each category
-and use that knowledge to make predictions about new images. The chatbot will
-use a decision tree to ask a series of questions about the user's symptoms, such as
-the location of the rash, its color, and any associated symptoms. The chatbot will
-then use this information to make a prediction based on the Decision Tree model
-with an accuracy of 91.557%. The chatbot will interact with the user through
-Natural Language Processing (NLP) techniques, to answer general questions
-posed by the user. The project's goal is to create an easy-to-use, accessible, and
-reliable tool for people who may not have access to or may not be able to afford
-a dermatologist by utilizing advanced machine learning techniques, such as CNN
-and Decision Trees, and integrating NLP in the chatbot.
+## Overview
+This project is an **AI-powered chatbot** designed to predict skin diseases by combining **image classification, decision tree analysis, and NLP-based conversational capabilities**. Users can upload an image of a skin condition and answer a short questionnaire, after which the chatbot predicts the most probable skin disease.  
+
+The system leverages:  
+- **Customized Convolutional Neural Network (CNN)** for image-based skin disease classification.  
+- **Dynamic ID3 Decision Tree** to refine predictions based on user symptoms.  
+- **Natural Language Processing (NLP)** for handling user queries and providing general information about skin diseases.  
+
+The goal is to provide an **accessible, accurate, and user-friendly tool** for skin disease detection, especially for individuals who may not have immediate access to dermatologists.
+
+---
+
+## Features
+- Image-based skin disease classification into six categories:  
+  - Actinic Keratosis  
+  - Basal Cell Carcinoma  
+  - Melanoma  
+  - Nevus  
+  - Seborrheic Keratosis  
+  - Squamous Cell Carcinoma  
+- Dynamic questionnaire for improved prediction accuracy using Decision Tree.  
+- NLP-enabled chatbot to answer general queries about skin diseases.  
+- User-friendly interface that guides users through image upload and symptom input.
+
+---
+
+## Tech Stack
+- **Programming Languages:** Python  
+- **Deep Learning:** TensorFlow, Keras, CNN  
+- **Machine Learning:** ID3 Decision Tree, Data Augmentation (Augmentor)  
+- **NLP:** NLTK for preprocessing and query handling  
+- **Data Visualization:** Matplotlib, Seaborn  
+- **Datasets:** ISIC2019 Skin Disease Image Dataset, custom symptom dataset for decision tree  
+- **Others:** Pandas, NumPy, PIL
+
+---
+
+## Project Modules
+
+### Module 1: CNN Model for Skin Disease Classification
+- Trains a **custom CNN** on the ISIC2019 dataset.  
+- Handles **class imbalance** using data augmentation.  
+- Model achieves:  
+  - **Training Accuracy:** 89.25%  
+  - **Validation Accuracy:** 87.33%  
+- Saves the trained CNN model for inference.
+
+### Module 2: Disease Shortlisting
+- Loads the trained CNN model to shortlist probable diseases for a given image.  
+- Diseases above a defined threshold (0.5) are selected for further analysis.
+
+### Module 3: Dynamic Decision Tree
+- Uses a **Dynamic ID3 Decision Tree** to ask symptom-based questions.  
+- Refines predictions using answers from the user.  
+- Improves diagnostic accuracy to **~91.56%**.
+
+### Module 4: NLP Chatbot
+- Handles general questions about skin diseases using a preprocessed Q&A corpus.  
+- Provides interactive, conversational support for users.
+
+## Results
+
+- Accurate skin disease predictions based on uploaded images and symptom analysis.  
+- **CNN model validation accuracy:** 87.33%  
+- **Decision Tree integrated predictions:** 91.56% accuracy  
+- Real-time chatbot interaction with symptom-based guidance and general skin disease knowledge.
+---
